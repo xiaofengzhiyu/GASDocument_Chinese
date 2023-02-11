@@ -371,7 +371,7 @@ void APAPlayerControllerBase::AcknowledgePossession(APawn* P)
 }
 ```
 
-对于玩家控制的Character且`ASC`位于`PlayerState`, 我一般在服务端`Pawn`的`PossessedBy()`函数中初始化, 在客户端PlayerController的`OnRep_PlayerState()`函数中初始化, 这确保了`PlayerState`存在于客户端上.  
+对于玩家控制的Character且`ASC`位于`PlayerState`, 我一般在服务端`Pawn`的`PossessedBy()`函数中初始化, 在客户端`Pawn`的`OnRep_PlayerState()`函数中初始化, 这确保了`PlayerState`存在于客户端上.  
 
 ```c++
 void AGDHeroCharacter::PossessedBy(AController * NewController)
